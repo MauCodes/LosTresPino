@@ -1,6 +1,6 @@
 package personas;
 
-public class Persona implements Verficiacion {
+public abstract class Persona implements Verficiacion {
 	
 	
 	protected String Rut;
@@ -27,6 +27,21 @@ public class Persona implements Verficiacion {
 		Empresa = empresa;
 	}
 	
+
+
+	public Persona(String rut, String nombre, String apellidoP, String apellidoM, String telefono, String celular,
+			String correo) {
+		super();
+		Rut = rut;
+		Nombre = nombre;
+		ApellidoP = apellidoP;
+		ApellidoM = apellidoM;
+		Telefono = telefono;
+		Celular = celular;
+		Correo = correo;
+	}
+
+
 
 	protected String getVerificador() {
 		return Verificador;

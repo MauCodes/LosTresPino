@@ -66,6 +66,7 @@ public class Main implements ActionListener{
 		Altura = 600; Anchura = 800;
 		
 		//Config de Ventana
+		Ventana.setLocationRelativeTo(null);
 		Ventana.setSize(Anchura, Altura);
 		Ventana.setForeground(Color.orange);
 		Ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,21 +99,16 @@ public class Main implements ActionListener{
 		
 		Ventana.add(menuBar);
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Main main = new Main();
-	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
 		if(arg0.getSource()==menu1Item5) {
-			System.err.close();
+			System.out.close();
 		}else if(arg0.getSource() == menu4Item5) {
 			String mensaje;
 			ingresoDatos.showInputDialog("Indicame el Id del Producto:");
-			mensaje = (String) ingresoDatos.toString();
+			mensaje = (String) ingresoDatos.getValue();
 			 System.out.println(mensaje);
 		}
 		
